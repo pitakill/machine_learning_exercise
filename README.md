@@ -1,24 +1,10 @@
 # Requirements
-`python 3.6`
+`docker`
 
 # Quick start
 
-### Setup the environment
+### Build the image with the current project state
 ```
-python -m venv .env
-source .env/bin/activate
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
-```
-
-### To train the model
-
-```
-python train.py
-```
-
-### To run the model against a phrase
-
-```
-python api.py
+$ docker build -t bot .
+$ docker run --rm bot
 ```
