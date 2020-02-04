@@ -5,7 +5,6 @@ catalogue==1.0.0
 certifi==2019.11.28
 chardet==3.0.4
 cymem==2.0.3
-en-core-web-sm==2.2.5
 gast==0.3.3
 google-pasta==0.1.8
 grpcio==1.26.0
