@@ -26,12 +26,11 @@ tokens_ignored = ['?', '!', ',', '.']
 
 for intent in data_json['intents']:
     for pattern in intent['patterns']:
-        doc = nlp(pattern)
-        for token in doc:
+        for token in nlp(pattern):
             if token.text in tokens_ignored:
                 continue
 
-            if (token.lemma_ != "-PRON-"):
+            if token.lemma_ != "-PRON-":
                 documents.append((token.lemma_, intent['tag']))
                 words.append(token.lemma_.lower())
             else:
